@@ -1,3 +1,5 @@
+### File used to run skymon in the metamon environment. Script does not work in the standalone metamon environment without modifications
+
 from metamon.env import get_metamon_teams, BattleAgainstBaseline
 from metamon.interface import DefaultObservationSpace, DefaultShapedReward, DefaultActionSpace
 from metamon.baselines import get_baseline
