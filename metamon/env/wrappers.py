@@ -411,6 +411,8 @@ class BattleAgainstBaseline(PokeEnvWrapper):
         save_trajectories_to: Optional[str] = None,
         save_team_results_to: Optional[str] = None,
         battle_backend: str = "poke-env",
+        player_username:  Optional[str] = None,
+        opponent_username: Optional[str] = None
     ):
         super().__init__(
             battle_format=battle_format,
@@ -424,6 +426,8 @@ class BattleAgainstBaseline(PokeEnvWrapper):
             save_trajectories_to=save_trajectories_to,
             save_team_results_to=save_team_results_to,
             battle_backend=battle_backend,
+            player_username=player_username,
+            opponent_username=opponent_username
         )
 
 
