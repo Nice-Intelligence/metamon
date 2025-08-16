@@ -40,15 +40,15 @@ if __name__ == "__main__":
     if args.opponent is not None:
         config_dict['opponent'] = args.opponent
 
-    if config_dict['opponent'] in config_dict['oppnents_info'].keys():
-        opp_info = config_dict['oppnents_info'][config_dict['opponent']]
+    if config_dict['opponent'] in config_dict['opponents_info'].keys():
+        opp_info = config_dict['opponents_info'][config_dict['opponent']]
 
         if config_dict['battle_format'] not in opp_info['battle_formats']:
             print(f"Error: Battle format {config_dict['battle_format']} not supported by opponent {config_dict['opponent']}")
             exit()
 
         if opp_info['isBaseline']:
-            BattleBaseline()
+            BattleBaseline(config_dict['battle_format'], config_dict['set'], config_dict['opponent'])
 
     else:
-        print("Error: Opponent info not found")
+        print(f"Error: Opponent {config_dict['opponent']} info not found")
